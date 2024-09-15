@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffb411;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.menu .heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu .heading span {
+    display: block;
+    font-size: 24px;
+    color: #333;
+}
+
+.menu .heading h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+#menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    width: 250px; /* Adjust width as needed */
+}
+
+.menu-item:hover {
+    background-color: #f1f1f1;
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.menu-item h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.menu-item p {
+    margin: 8px 0;
+}
+
+footer {
+    background-color: #ffb411;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin: 0;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.socials a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="spacer"></div>
+    <header>
+        <a href="#" class="logo">Slice Haven</a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    
+        <!-- Link To CSS -->
+  <link rel="stylesheet" href="Styles2.css">
+    </header>
+
+    <!-- Pizza Menu Section -->
+    <section class="menu" id="menu">
+        <div class="heading">
+            <span>Menu</span>
+            <h2>Our Delicious Pizzas</h2>
+        </div>
+
+        <div id="menu-container"></div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                fetch('/api/menu')
+                    .then(response => response.json())
+                    .then(data => {
+                        const menuContainer = document.getElementById('menu-container');
+                        if (data.length === 0) {
+                            menuContainer.innerHTML = '<p>No items in the menu.</p>';
+                        } else {
+                            data.forEach(item => {
+                                const menuItem = document.createElement('div');
+                                menuItem.className = 'menu-item';
+                                menuItem.innerHTML = `
+                                    <h2>${item.name}</h2>
+                                    <p>${item.description}</p>
+                                    <p>Price: $${item.price}</p>
+                                    <img src="${item.img_path}" alt="${item.name}">
+                                    <a href="order.html?id=${item.id}" class="order-btn">Order Now</a>
+                                `;
+                                menuContainer.appendChild(menuItem);
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching menu data:', error);
+                        document.getElementById('menu-container').innerHTML = '<p>Error loading menu.</p>';
+                    });
+            });
+        </script>
+
+        
+           
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Slice Haven Pizza</h3>
+            <p>Enjoy our wide selection of delicious pizzas, made fresh just for you!</p>
+            <ul class="socials">
+                <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
