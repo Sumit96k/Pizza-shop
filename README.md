@@ -27,5 +27,5 @@ Description: The order page allows users to place an order for their chosen pizz
  )_
 
 ## 👤 Author
-- **Sumit Shinde** - [GitHub](https://github.com/Sumit96k/Pizza-shop)
+- **Sumit Shinde** - (https://github.com/Sumit96k/Pizza-shop)
 
